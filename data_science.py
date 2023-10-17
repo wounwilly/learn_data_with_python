@@ -188,4 +188,13 @@ analyse_donnee = csv_data.describe()
 print()
 print("Analyse des données d'un tableau avec la fonction describe: \n", analyse_donnee)
 
+## std : c'est ecart - type
+## mean: la moyenne 
+## min: la valeur la plus basse
+## max: la valeur la plus élevée
+## compter: compte le nombre moyen d'obsevations
+#--------------------------------------------------------------------------------------------
+
+# ---------------- Fonctions de science des données - Fonctions linéaires --------------------
+
 #--------------------------------------------------------------------------------------------

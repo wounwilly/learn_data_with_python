@@ -6,7 +6,6 @@ import numpy as np
 # Matplotlib est une bibliothèque de traçage de graphes de bas niveau 
 # en python qui sert d'utilitaire de visualisation
 
-"""
 # ---------------------------------------- Pyplot -----------------------------------------
 # La plupart des utilitaires Matplotlib se trouve sous pyplot qui est un sous module de Matplotlib
 
@@ -275,7 +274,7 @@ plt.title("INCOME")                  # Ajout de titre à chaque tracé
 plt.suptitle("MY SHOP")              # Ajout du supertitre à chaque tracé
 plt.show()
 #-------------------------------------------------------------------------------------------
-"""
+
 # ---------------------- Scatter(nuage des points) Matplotlib ------------------------------
 # Pour dessiner un nuage de point nous pouvons utiliser la fonction scatter()
 # il prends en arguments 2 tableaux de même longueur 
@@ -425,6 +424,9 @@ mycolors = ["black", "hotpink", "b", "#4CAF50"]
 
 plt.pie(y, labels = mylabels, colors = mycolors)
 plt.show()
+
+plt.subplot()
+
 #--------------------------------------------------------------------------------------------
 
 version_matplolib = matplotlib.__version__

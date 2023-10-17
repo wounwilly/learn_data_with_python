@@ -984,6 +984,16 @@ print("La différence entre l'ensemble1 et l'ensemble2", difference)       # res
 # Trouver l'intersection des deux ensembles de tableaux suivants
 intersection_2tab = np.intersect1d(arr1, arr2, assume_unique=True)
 print("l'intersection des deux ensembles de tableaux:", intersection_2tab)
+
+# Trouver l'union des deux ensembles de tableaux suivants:
+union_2tab = np.union1d(arr1, arr2)
+print("L'union des deux ensembles de tableaux:", union_2tab)          # resultat est un tableau [1 2 3 4 5 6]
+
+# Création d'un ensemble avec la fonction unique() pour trouver des elements uniques  à partir 
+# à partir de n'importe quel tableau
+arr = np.array([1, 1, 1, 2, 3, 4, 5, 5, 6, 7])
+creation_ensUnique = np.unique(arr)
+print("Trouver des elements uniques dans un tableau:", creation_ensUnique)
 #-------------------------------------------------------------------------------------------------
 
 

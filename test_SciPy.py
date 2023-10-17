@@ -21,6 +21,9 @@ from scipy.interpolate import UnivariateSpline
 from scipy.interpolate import Rbf
 from scipy.stats import kstest
 from scipy.stats import ttest_ind
+from scipy.stats import describe
+from scipy.stats import skew, kurtosis
+from scipy.stats import normaltest
 from scipy import io
 import matplotlib.pyplot as plt
 from math import cos
@@ -622,4 +625,45 @@ print("Déterminez si les valeurs v1 et v2 données proviennent de la même dist
 v = np.random.normal(size=100)
 resultat_test_ks = kstest(v, 'norm')
 print("Déterminez si la valeur donnée suit la distribution normale:", resultat_test_ks)
+
+### Description statistique des données
+# La fonction describe() permet de voir le résumé des valeurs dans un tableau 
+# Renvoie la description suivante :
+# nombre d'observations (nobs) 
+# valeurs minimale et maximale = minmax
+# moyenne
+# variance
+# asymetrie
+# aplatissement
+
+v = np.random.normal(size=100)
+description_statistique = describe(v)
+print("Affichage de la description statistique des valeurs dans un tableau:", description_statistique)
+
+### Tests de normalité (asymétrie et aplatissement)
+# Les tests de normalité sont basés sur (l'asymétrie) et (l'aplatissement)
+# La fonction normaltest() renvoie la valeur P pour l'hypothèse nulle
+# X provien d'une distribution normale.
+
+## asymetrie
+# mesure la symétrie dans les données
+# pour une distribution normal elle vaut 0
+# si il est négatif alors les données sont faussées vers la gauche
+# si il est positif alors les données sont faussées vers la droite
+
+##  aplatissement
+# indique si les données sont lourdement ou légèrement alignées sur une distribution normale
+# Un aplatissement positif signifie une queue lourde
+# Un aplatissement négatif signifie à queue légère.
+
+# Trouvez l'asymétrie et l'aplatissement des valeurs dans un tableau :
+v = np.random.normal(size=100)
+
+print("l'asymétrie:", skew(v))
+print("l'aplatissement:", kurtosis(v))
+
+# Déterminez si les données proviennent d'une distribution normale :
+v = np.random.normal(size=100)
+distribution_normal = normaltest(v)             # Vérifie si les données proviennent d'une distribution normale
+print("Vérifie si les données proviennent d'une distribution normale:", distribution_normal)
 #-----------------------------------------------------------------------------------------------
